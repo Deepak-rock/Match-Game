@@ -2,7 +2,7 @@ import './index.css'
 
 const GameImageItem = props => {
   const {thumbnailDetails, clickImageMatch} = props
-  const {imageUrl, id} = thumbnailDetails
+  const {thumbnailUrl, id} = thumbnailDetails
   const clickThumbnail = () => {
     clickImageMatch(id)
   }
@@ -13,7 +13,7 @@ const GameImageItem = props => {
         onClick={clickThumbnail}
         type="button"
       >
-        <img className="thumbnail" src={imageUrl} alt="thumbnail" />
+        <img className="thumbnail" src={thumbnailUrl} alt="thumbnail" />
       </button>
     </li>
   )

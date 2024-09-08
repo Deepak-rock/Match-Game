@@ -252,8 +252,8 @@ const imagesList = [
 // Replace your code here
 class App extends Component {
   state = {
+    category: 'FRUIT',
     imgUrl: imagesList[0].imageUrl,
-    activeId: tabsList[0].tabId,
     score: 0,
     timerSeconds: 60,
     isTrue: false,
@@ -274,7 +274,7 @@ class App extends Component {
   }
 
   updateActivetabId = tabId => {
-    this.setState({activeId: tabId})
+    this.setState({category: tabId})
   }
 
   playAgain = () => {
@@ -283,6 +283,7 @@ class App extends Component {
       score: 0,
       timerSeconds: 60,
       isTrue: false,
+      category: tabsList[0].tabId,
     })
     this.timerId = setInterval(this.stateChange, 1000)
   }
@@ -307,15 +308,15 @@ class App extends Component {
   }
 
   getFilteredImage = () => {
-    const {activeId} = this.state
+    const {category} = this.state
     const filteredImage = imagesList.filter(
-      eachImage => eachImage.category === activeId,
+      eachImage => eachImage.category === category,
     )
     return filteredImage
   }
 
   renderGame = () => {
-    const {imgUrl, activeId} = this.state
+    const {imgUrl, category} = this.state
     const filteredImage = this.getFilteredImage()
     return (
       <>
@@ -328,14 +329,14 @@ class App extends Component {
               key={tabItem.tabId}
               tabDetails={tabItem}
               updateActivetabId={this.updateActivetabId}
-              isActive={activeId === tabItem.tabId}
+              category={category === tabItem.tabId}
             />
           ))}
         </ul>
         <ul className="thumbnail-image-list">
           {filteredImage.map(thumbnailDetails => (
             <GameImageItem
-              key={thumbnailDetails.id}
+              key={thumbnailDetails.thumbnailUrl}
               thumbnailDetails={thumbnailDetails}
               clickImageMatch={this.clickImageMatch}
             />
@@ -355,7 +356,7 @@ class App extends Component {
             src="https://assets.ccbp.in/frontend/react-js/match-game-trophy.png"
             alt="trophy"
           />
-          <h1 className="heading">YOUR SCORE</h1>
+          <p className="heading">YOUR SCORE</p>
           <p className="played-score">{score}</p>
           <button
             className="play-again-button"
@@ -388,23 +389,22 @@ class App extends Component {
                   alt="website logo"
                 />
               </div>
-              <div className="Score-timer-container">
-                <p className="score">
-                  Score:
-                  <span className="count"> {score}</span>
-                </p>
-                <div className="timer-icon-timer-container">
+              <ul className="Score-timer-container">
+                <li>
+                  <p className="score">
+                    Score:
+                    <span className="count"> {score}</span>
+                  </p>
+                </li>
+                <li className="timer-icon-timer-container">
                   <img
                     className="timer-icon"
                     src="https://assets.ccbp.in/frontend/react-js/match-game-timer-img.png"
                     alt="timer"
                   />
-                  <p className="timer">
-                    <span className="count">{timerSeconds} </span>
-                    sec
-                  </p>
-                </div>
-              </div>
+                  <p className="timer count">{timerSeconds} sec</p>
+                </li>
+              </ul>
             </nav>
           </div>
         </div>
