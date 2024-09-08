@@ -1,23 +1,23 @@
-.image-thumbnail-button{
-    background-color: transparent;
-    border:none;
-    outline: none;
-    padding: 10px;
-    cursor: pointer;
+.image-thumbnail-button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding: 10px;
+  cursor: pointer;
 }
-.thumbnail{
-    width: 70px;
-    height: 75px;
+.thumbnail {
+  width: 70px;
+  height: 75px;
 }
-@media screen and (min-width:768px){
-    .thumbnail{
-        width: 120px;
-        height: 130px;
-    }
+@media screen and (min-width: 768px) {
+  .thumbnail {
+    width: 120px;
+    height: 130px;
+  }
 }
-@media screen and (min-width:992px){
-    .thumbnail{
-        width: 150px;
-        height: 160px;
-    }
+@media screen and (min-width: 992px) {
+  .thumbnail {
+    width: 150px;
+    height: 160px;
+  }
 }
