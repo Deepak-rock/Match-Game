@@ -10,3 +10,210 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.bg-img-container{
+  background-image: url("https://assets.ccbp.in/frontend/react-js/match-game-bg.png");
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.app-container{
+  padding: 10px 20px;
+  width: 100%;
+  background-color: #2c0e3a;
+}
+.responsive-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1120px;
+  height: 5vh;
+}
+.logo{
+  width: 120px;
+}
+.Score-timer-container{
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.timer-icon-timer-container{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.timer-icon{
+  width: 20px;
+  height: 20px;
+}
+.score,.timer{
+  color: #ffffff;
+  font-size: 14px;
+}
+.count{
+  color: #fec653;
+  font-size: 16px;
+}
+.match-this-image-container{
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+.main-image{
+  width: 100%;
+  border-radius: 10px;
+}
+.content{
+  display: flex;
+  flex-direction: column;
+  align-items: centers;
+}
+.tabs-list{
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+.thumbnail-image-list{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  list-style-type: none;
+  margin: 20px 0;
+  padding: 0;
+  max-width: 900px;
+}
+.scorecard-container{
+  padding: 50px;
+}
+.score-card-image{
+  background-image: url("https://assets.ccbp.in/frontend/react-js/match-game-score-card-sm-bg.png");
+  background-size: cover;
+  background-position: center;
+  width: 300px;
+  min-height: 75vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+.trophy-img{
+  margin: 40px 0 0 0;
+  width: 200px;
+  height: 150px;
+}
+.heading{
+  font-family: 'roboto';
+  color: #ffffff;
+  padding: 0;
+  font-size: 16px;
+  font-weight: bold;
+}
+.played-score{
+  font-family: 'roboto';
+  color: #ffffff;
+  padding: 0;
+  font-size: 18px;
+  font-weight: 700;
+}
+.play-again-button{
+  display: flex;
+  background-color: #cf60c8;
+  align-items: center;
+  border: none;
+  outline: none;
+  padding: 14px 18px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.reset{
+  margin: 0 10px 0 0;
+}
+.btn{
+  font-family: 'roboto';
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+}
+@media screen and (min-width:768px){
+  .logo{
+    width: 150px;
+  }
+  .score,.timer{
+    font-size: 16px;
+  }
+  .match-this-image-container{
+    display: flex;
+    justify-content: center;
+    margin: 50px 20px 20px 20px;
+  }
+  .main-image{
+    width: 70%;
+  }
+  .score-card-image{
+    width: 500px;
+  }
+  .score-card-image{
+    background-image: url("https://assets.ccbp.in/frontend/react-js/match-game-score-card-lg-bg.png");
+  }
+  .trophy-img{
+    margin: 120px 0 0 0 ;
+    width: 250px;
+    height: 200px;
+  }
+  .heading{
+    font-size: 24px;
+  }
+  .played-score{
+    font-size: 28px;
+  }
+  .btn{
+    font-size: 26px;
+  }
+}
+@media screen and (min-width:992px){
+  .main-image{
+    width: 60%;
+  }
+  .tab-button{
+    font-size: 18px;
+  }
+}
+@media screen and (min-width:1440px){
+  .tab-button{
+    font-size: 20px;
+  }
+}
+
+
+/* <div className="scorecard-container">
+<div className="score-card-image">
+  <img
+    className="trophy-img"
+    src="https://assets.ccbp.in/frontend/react-js/match-game-trophy.png"
+    alt="trophy"
+  />
+  <h1 className="heading">YOUR SCORE</h1>
+  <p className="played-score">{score}</p>
+  <button className="play-again-button">
+    <img
+      src="https://assets.ccbp.in/frontend/react-js/match-game-play-again-img.png"
+      alt="reset"
+      className="reset"
+    />
+    <p className="btn">PLAY AGAIN</p>
+  </button>
+</div>
+</div> */
